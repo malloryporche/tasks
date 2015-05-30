@@ -1,0 +1,27 @@
+<template name="header">
+	<header class="navbar navbar-default">
+
+		<!--Left Navigation Component-->
+		<div class="navbar-header header-left" left>
+			<a class=" navbar-board" href="/"><button>
+				<span class="glyphicon glyphicon-th glyphicon-sm"> Boards</span></button>
+			</a>	
+			<button class=" navbar-search" href="/">
+				<span class="glyphicon glyphicon-search glyphicon-sm"></span>
+			</button>	
+		</div>
+
+		<!--Brand-->
+		<div class="navbar-header header-center">
+			<a href=""><span class="glyphicon glyphicon-equalizer">Tasks </span></a>
+		</div>
+		
+		<!--Account Settings & Notification-->
+		<div class="navbar-header header-right">
+			<button class="#"><span class="glyphicon glyphicon-plus glyphicon-sm"></span></button>
+			<button class="#"><span class="glyphicon glyphicon-user glyphicon-sm"> MemberName {{memberName}} {{memberImage}}</span></button>
+			<button class="#"><span class="glyphicon glyphicon-bell glyphicon-sm"></span></button>
+		</div>
+					
+	</header>
+</template>
