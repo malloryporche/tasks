@@ -1,9 +1,12 @@
-Boards = new Mongo.Collection('boards');
-TaskLists = new Mongo.Collection('tasklists');
-
 
 if (Meteor.isClient) {
-  
+  Meteor.subscribe('tasklists');  
+
+  Meteor.subscribe('boards');
+
+  Meteor.subscribe('cards');
+
+
   Template.boardsList.helpers({ 
   boards: function() {
     return Boards.find()
@@ -11,7 +14,7 @@ if (Meteor.isClient) {
   });
 
   Template.boardPage.helpers({
-  	TaskLists: function() {
+  	tasklists: function() {
   		return TaskLists.find({ boardId: this._id});
   	}
   })

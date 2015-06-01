@@ -1,0 +1,18 @@
+<template name="tasklist">
+	<h1><a href="#">{{title}}</a></h1>
+		<ul>
+		
+		{{#each tasklist}}
+			
+			{{> TaskCard}}
+			
+			{{else}}
+
+			<li>Sorry there are no task cards created yet</li>
+
+		{{/each}}
+		
+
+		</ul>
+
+</template>
