@@ -6,7 +6,11 @@ section#main {
 	padding: 0px 15px;
 }
 
-
+a {
+	text-decoration: none;
+}
+a:hover {			text-decoration: none;
+}
 /* Header & Navbar styling */
 
 header {
@@ -49,3 +53,20 @@ div.navbar-header.header-right {
 	}
 
 
+/* BOARDS */
+
+.board {
+	display: inline-block;
+	width: 225px;
+	border: 3px solid seagreen;
+	background-color: seagreen;
+	color: white;
+	height: 250px;
+	margin: 10px auto;
+	h3 {
+		text-align: center;
+		a {
+			color: white;
+		}
+	}
+}

@@ -7,7 +7,7 @@ if (Meteor.isClient) {
   Meteor.subscribe('cards');
 
 
-  Template.boardsList.helpers({ 
+  Template.BoardsList.helpers({ 
   boards: function() {
     return Boards.find()
     }
