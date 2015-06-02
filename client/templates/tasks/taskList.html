@@ -12,30 +12,25 @@
 
       <div class="list-group">
 			<ul>
-        {{#each tasklist}}
 
-
-			{{> Card}}
+			{{#each cards}}
+				
+				{{> Card}}
 			
-			{{else}}
+					{{else}}
 
-				<li>Sorry there are no task cards created yet</li>
+					<li>Sorry there are no task cards created yet</li>
 
 			{{/each}}
+
+		
 		</ul>
       </div>
+
     </div>
 
-		
-		
-		
-		<form>
-			<input type="text" name="addNewCard" class="addNewCard" placeholder="Insert new card" />
-		</form>
+		{{> AddNewCard}}
 
-
-    
-    
   </div>
   </div>
 </template>

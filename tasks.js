@@ -17,7 +17,13 @@ if (Meteor.isClient) {
   	tasklists: function() {
   		return TaskLists.find({ boardId: this._id});
   	}
-  })
+  });
+
+  Template.TaskList.helpers({
+    cards: function() {
+    return Cards.find({ tasklistId: this._id});
+  }
+})
 }
 
 if (Meteor.isServer) {

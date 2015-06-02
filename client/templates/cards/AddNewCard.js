@@ -1,21 +1,24 @@
-Template.TaskList.events({
+Template.AddNewCard.events({
 	//When form is submitted via Enter
-	'keypress input#newCard': function(e, tmpl) {
+	'keypress input.AddNewCard': function(e, tmpl) {
 		 if (e.which === 13) {
 		 	//Prevent default submission of form
 			e.preventDefault();
 
 		//Get access to form itself
 		var form = tmpl.find('form');
-		var CardValue = tmpl.find('[name=addNewCard]');
+		var CardValue = tmpl.find('.AddNewCard');
 		var cardTitle = CardValue.value;
 	
+		debugger 
+
 		//Append boardId and taskListId
 		Cards.insert({
 			title: cardTitle,
 			timestamp: new Date,
-			boardId: board._id,
-			tasklistId: this._id
+			boardId: this.boardId,
+			tasklistId: this._id,
+			boardTitle: this.title
 		});
 
 		//Clear form
