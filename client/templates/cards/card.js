@@ -1,4 +1,4 @@
-Template.cardDetail.helpers({
+Template.Card.helpers({
 	title: function() {
 		return Cards.find()
 	}

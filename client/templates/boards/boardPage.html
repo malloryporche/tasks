@@ -1,23 +1,16 @@
 <template name="boardPage">
 
-<h2>{{title}}</h2>
-
-	<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
- <span class="glyphicon glyphicon-plus"></span>
-</button>
-<span class="none">Add new card</span>
-
 <div class="heading">
-	  {{> newModal}}
+	<h2>{{title}}</h2>
+</div>
 
 	  {{> addNewTaskList}}
-</div>
+
 	
 
 	{{#each tasklists}}
 
-		{{> TaskCard}}
+		{{> TaskList}}
 
 	{{/each }}
 
