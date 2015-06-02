@@ -1,5 +1,5 @@
 Template.Card.helpers({
 	title: function() {
-		return Cards.find()
+		return Cards.find({this.title})
 	}
 });
