@@ -57,11 +57,11 @@ div.navbar-header.header-right {
 
 .board {
 	display: inline-block;
-	width: 225px;
+	width: 100%;
 	border: 3px solid seagreen;
 	background-color: seagreen;
 	color: white;
-	height: 250px;
+	height: 115px;
 	margin: 10px auto;
 	h3 {
 		text-align: center;
@@ -71,6 +71,13 @@ div.navbar-header.header-right {
 	}
 }
 
+span.boardStar {
+	color: white;
+	padding: 0 0 7px 7px;
+
+}
+/* BOARD TITLE */
+
 .heading {
 	text-transform: uppercase;
 	letter-spacing: 0.25em;
@@ -78,6 +85,18 @@ div.navbar-header.header-right {
 	padding: 0;
 	border-bottom: 2px solid black;
 	margin-bottom: 30px;
+}
 
+.tasklist {
+	margin: 10px;
+}
 
+/*  TASKLISTS */
+
+input.addNewCard {
+	margin: 10px 0px;
+	padding: 0px 7px;
+	width: 90%;
+	border: none;
+	letter-spacing: 0.15em;
 }
