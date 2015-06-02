@@ -100,3 +100,11 @@ input.AddNewCard {
 	border: none;
 	letter-spacing: 0.15em;
 }
+.card {
+	h4 {
+		display: inline-block;
+	}
+}
+input.checkbox {
+	display: inline-block;
+}
