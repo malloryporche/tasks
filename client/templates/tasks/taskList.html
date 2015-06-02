@@ -1,18 +1,39 @@
 <template name="TaskList">
-	<h1><a href="#">{{title}}</a></h1>
-		<ul>
-		
-		{{#each tasklist}}
-			
-			{{> TaskCard}}
+	<div class="panel-group" id="A{{_id}}" role="tablist" aria-multiselectable="true">
+  		<div class="panel panel-default">
+			<div class="panel-heading" role="tab" id="heading{{_id}}">
+		      <h1 class="panel-title">
+		        <a data-toggle="collapse" data-parent="#A{{_id}}" href="#collapse{{_id}}" aria-expanded="true" aria-controls="collapse{{_id}}">{{title}}
+		        </a>
+		      </h1>
+		    </div>
+		<div id="collapse{{_id}}" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading{{_id}}">
+      <div class="list-group">
+			<ul>
+        {{#each tasklist}}
+
+
+			{{> Card}}
 			
 			{{else}}
 
-			<li>Sorry there are no task cards created yet</li>
+				<li>Sorry there are no task cards created yet</li>
 
-		{{/each}}
-		
-
+			{{/each}}
 		</ul>
+      </div>
+    </div>
 
+		
+		
+		
+		<form>
+			<input type="text" name="addNewCard" class="addNewCard" placeholder="Insert new card" />
+		</form>
+
+
+    
+    
+  </div>
+  </div>
 </template>
